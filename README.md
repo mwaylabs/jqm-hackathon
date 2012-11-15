@@ -1,6 +1,6 @@
 #TMP jQuery mobile hackathon 
 
-### Welchome to our Hackathon!
+### Welchrome to our Hackathon!
 
 1.  Have a look at the issues
 2.  Choose one and work on it
