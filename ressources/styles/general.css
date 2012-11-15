@@ -1,0 +1,12 @@
+#descr{
+	font-size: 14px;
+	display: block;
+	border: 1px solid #333;
+	padding: 10px;
+	margin: 10px;
+}
+
+#descr:before{
+	color: #ff0000;
+	content:'Description: '
+}
