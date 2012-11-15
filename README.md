@@ -18,3 +18,10 @@ http://127.0.0.1:8125/jqm_rendering/button/buttontest.html
 or in more general spoken:
 
 http://127.0.0.1:8125/my_issue/my_test_folder/my_code_starts_here.html
+
+###Links
+-	http://jquerymobile.com/
+-	http://jquerymobile.com/download-builder/
+-	http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.js
+-	http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.css
+
