@@ -9,25 +9,30 @@ var loadList = [];
 var pageList = ['page2.js', 'page3.js', 'page4.js', 'page5.js'];
 var pageLoadList = [];
 
-jsList.forEach(function(i) {
-	if(i) {
-		var js = document.createElement("script"); 
-		js.src = i; 
-		js.onload = function(data, b,c){
-			loadList.push(i);
-			console.log(i + ' DID LOAD');
+function bootstrap() {
+//    jsList.forEach(function(i) {
+    var i = jsList.shift();
+    if(i) {
+        var js = document.createElement("script");
+        js.src = i;
+        js.onload = function(data, b,c){
+            // loadList.push(i);
+            console.log(i + ' DID LOAD');
 
             console.log(data, b,c);
-			checkIfBootstrapDone();
-		}; 
-	
-		document.body.appendChild(js);	
-	}
-});
+            checkIfBootstrapDone();
+            // load next if current loaded
+            bootstrap();
+        };
+
+        document.head.appendChild(js);
+    }
+//    });
+}
 
 function checkIfBootstrapDone() {
     //jsList.length === document.scripts.length
-    if(jsList.length === loadList.length) {
+    if(jsList.length == 0) {
 		//trigger event
 		console.log('BOOTSTRAPING DONE');
 
@@ -50,8 +55,7 @@ function loadPage(url, async) {
 			console.log(url + ' DID LOAD');
 			
 			checkIfPageLoadDone();
-		}; 
-	
+		};
 		document.body.appendChild(js);		
 }
 
