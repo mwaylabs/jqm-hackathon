@@ -1,0 +1,15 @@
+<html>
+<!--<html manifest="cache.manifest">-->
+<head>
+</head>
+<body onload="console.log('body load');bootstrap(); ">
+<!--<img src="http://www.panacoda.com/wp-content/themes/vulcan/timthumb.php?src=http://www.panacoda.com/wp-content/uploads/2012/05/slide_html5.png&h=280&w=936&zc=1" />-->
+<script>
+var bootstrap = function(){
+	var bootstrapJS = document.createElement("script");
+	bootstrapJS.src = "bootstrap.js";
+	document.body.appendChild(bootstrapJS);
+}
+</script>
+</body>
+</html>
